@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 import { profile } from "../data";
 import SectionHeading from "./SectionHeading";
 
@@ -7,6 +7,7 @@ export default function About() {
     { Icon: FaMapMarkerAlt, label: "Location", value: profile.location, iconClass: "text-red-400" },
     { Icon: FaEnvelope, label: "Email", value: profile.email, iconClass: "text-sky-400" },
     { Icon: FaPhoneAlt, label: "Phone", value: profile.phone, iconClass: "text-emerald-400" },
+    { Icon: FaGlobe, label: "Portfolio Live", value: profile.portfolioLabel, iconClass: "text-sky-300", href: profile.portfolioUrl },
     { Icon: FaLinkedin, label: "LinkedIn", value: profile.linkedinLabel, iconClass: "text-[#0A9BD8]" },
     { Icon: FaGithub, label: "GitHub", value: profile.githubLabel, iconClass: "text-white" },
   ];
@@ -40,17 +41,30 @@ export default function About() {
           <div className="md:col-span-2 bg-slate-900/85 backdrop-blur-md border border-slate-800 rounded-2xl p-7">
             <h3 className="text-white font-semibold mb-4">Quick Info</h3>
             <ul className="space-y-3 text-sm">
-              {info.map(({ Icon, label, value, iconClass }) => (
-                <li key={label} className="flex items-center gap-3 bg-slate-800/60 border border-slate-800 rounded-xl px-4 py-3">
-                  <span className="w-8 h-8 shrink-0 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center">
-                    <Icon className={iconClass} />
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block text-slate-400 text-xs">{label}</span>
-                    <span className="block text-slate-100 break-all">{value}</span>
-                  </span>
-                </li>
-              ))}
+              {info.map(({ Icon, label, value, iconClass, href }) => {
+                const inner = (
+                  <>
+                    <span className="w-8 h-8 shrink-0 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center">
+                      <Icon className={iconClass} />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-slate-400 text-xs">{label}</span>
+                      <span className="block text-slate-100 break-all">{value}</span>
+                    </span>
+                  </>
+                );
+                return href ? (
+                  <li key={label}>
+                    <a href={href} target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-slate-800/60 border border-slate-800 rounded-xl px-4 py-3 hover:border-sky-500/40 transition-colors">
+                      {inner}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={label} className="flex items-center gap-3 bg-slate-800/60 border border-slate-800 rounded-xl px-4 py-3">
+                    {inner}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

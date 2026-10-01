@@ -52,19 +52,27 @@ export default function Projects() {
                   <FaGithub className="text-base" />
                   GitHub
                 </a>
-                <a
-                  href={p.live}
-                  className="flex-1 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 py-2.5 rounded-lg transition-colors"
-                >
-                  <FaExternalLinkAlt className="text-xs" />
-                  Live Demo
-                </a>
+                {p.live && p.live !== "#" ? (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 py-2.5 rounded-lg transition-colors"
+                  >
+                    <FaExternalLinkAlt className="text-xs" />
+                    Live Demo
+                  </a>
+                ) : (
+                  <span className="flex-1 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-slate-800/60 text-slate-500 py-2.5 rounded-lg border border-slate-800 cursor-not-allowed">
+                    Coming Soon
+                  </span>
+                )}
               </div>
             </article>
           ))}
         </div>
         <p className="text-center text-xs text-slate-500 mt-6">
-          * GitHub links go to your profile for now — Live demos are placeholders (#). Send live URLs and I&apos;ll wire them up.
+          * Portfolio Website is live at shyam-v.netlify.app — other Live demos coming soon.
         </p>
       </div>
     </section>

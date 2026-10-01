@@ -13,6 +13,8 @@ export const profile = {
   linkedinLabel: "linkedin.com/in/shyam-v-4779b6357",
   github: "https://github.com/shyam-v-0",
   githubLabel: "github.com/shyam-v-0",
+  portfolioUrl: "https://shyam-v.netlify.app",
+  portfolioLabel: "shyam-v.netlify.app",
   summary:
     "Fresher Full Stack Developer with a strong interest in Frontend and AI-powered application development. Hands-on knowledge of React.js, JavaScript, Python, Node.js, FastAPI, MongoDB, and modern UI technologies. Familiar with Context API, RAG concepts, and building responsive, user-friendly web applications. Eager to contribute, learn, and grow in a collaborative development environment.",
 };
@@ -80,7 +82,7 @@ export const projects = [
     ],
     tech: ["React.js", "HTML5", "CSS3", "React Router", "Responsive Design"],
     github: "https://github.com/shyam-v-0",
-    live: "#",
+    live: "https://shyam-v.netlify.app",
   },
   {
     title: "Student Management CRUD Application",
