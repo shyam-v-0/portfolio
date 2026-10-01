@@ -30,7 +30,7 @@ export const skills = [
   },
   {
     category: "Backend & APIs",
-    items: ["Node.js", "FastAPI", "REST APIs", "React Router", "Form Validation"],
+    items: ["Node.js", "FastAPI", "REST APIs"],
   },
   {
     category: "Database",
