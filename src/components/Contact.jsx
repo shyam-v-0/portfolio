@@ -41,7 +41,6 @@ export default function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Let's Work Together"
-          subtitle="Form opens your email app addressed to me — plus direct phone, WhatsApp, LinkedIn and GitHub."
         />
         <div className="grid md:grid-cols-2 gap-6">
           {/* Form */}
