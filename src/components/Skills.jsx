@@ -17,8 +17,6 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           eyebrow="Tech Stack"
-          title="Skills — HTML5, CSS3, Tailwind & React"
-          subtitle="The exact stack you asked for, plus backend, DB and AI basics from my resume."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {skills.map((s) => {
