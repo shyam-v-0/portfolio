@@ -22,7 +22,7 @@ export const profile = {
 export const skills = [
   {
     category: "Languages",
-    items: ["Python", "JavaScript", "Java", "HTML5", "CSS3"],
+    items: ["Python", "JavaScript", "Java", "HTML5"],
   },
   {
     category: "Frontend",
